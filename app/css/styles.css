@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+  width: 100%;
+  height: 478px; }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94.5%;
+    margin: 0 auto;
+    height: 80px; }
+  header .arinka-logo {
+    display: flex;
+    align-items: center; }
+    header .arinka-logo div {
+      margin-right: 20px; }
+    header .arinka-logo p {
+      color: #fff;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 14px; }
+  header .navlink-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 232px; }
+    header .navlink-wrapper a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px; }
+      header .navlink-wrapper a:hover {
+        text-decoration: underline; }
+  header button {
+    width: 175px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    border: none;
+    color: #fff; }
+    header button:hover {
+      cursor: pointer;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5); }
+  header h1 {
+    width: 738px;
+    text-align: center;
+    color: #fff;
+    margin: 50px auto 40px auto;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px; }
+  header p {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px; }
+  header label {
+    display: none; }
+
+section .input-below-header {
+  margin: -40px auto 140px auto;
+  text-align: center; }
+  section .input-below-header input {
+    border: 3px solid #F2994A;
+    box-sizing: border-box;
+    border-radius: 100px;
+    margin-bottom: -40px;
+    margin: 0 auto;
+    height: 80px;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    outline: none;
+    font-size: 18px; }
+    section .input-below-header input::placeholder {
+      color: #C3C0C0;
+      font-size: 18px;
+      text-align: center; }
+
+section .about-arinka {
+  width: 62%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 90px; }
+  section .about-arinka h1 {
+    color: #C3C0C0;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px; }
+  section .about-arinka p {
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px; }
+
+section .arinka-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  max-width: 79%;
+  margin: 0 auto;
+  margin-bottom: 120px; }
+  section .arinka-images .one {
+    width: 350px;
+    height: 400px; }
+    section .arinka-images .one img {
+      width: 100%;
+      height: 100%; }
+
+section .btn-below-imgs {
+  text-align: center;
+  margin-bottom: 80px; }
+  section .btn-below-imgs button {
+    width: 200px;
+    height: 60px;
+    border: 2px solid #E36F55;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color: #E46F55;
+    background: none; }
+    section .btn-below-imgs button:hover {
+      cursor: pointer; }
+
+section .hanging-out {
+  position: relative;
+  width: 100%; }
+  section .hanging-out .hanging-out-img {
+    width: 100%;
+    height: 500px;
+    z-index: -5; }
+    section .hanging-out .hanging-out-img img {
+      width: 100%;
+      height: 100%; }
+  section .hanging-out .text {
+    position: absolute;
+    top: 155px;
+    left: 179px;
+    width: 27%; }
+    section .hanging-out .text p {
+      color: #FEBE61;
+      margin: 0;
+      margin-bottom: 20px;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px; }
+    section .hanging-out .text h1 {
+      line-height: 77px;
+      margin: 0;
+      color: #fff;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 70px; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 60px;
+  box-sizing: border-box;
+  margin: 0 auto; }
+  footer a {
+    text-decoration: none;
+    color: #A9A9A9;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px; }
+    footer a:hover {
+      cursor: pointer; }
+  footer p {
+    margin: 0;
+    color: #A9A9A9;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px; }
+
+@media only screen and (max-width: 500px) {
+  header .navlink-wrapper {
+    display: none; }
+  header button {
+    display: none; }
+  header label {
+    display: block; }
+    header label:hover {
+      transition: .5s;
+      opacity: .8;
+      cursor: pointer; }
+    header label img {
+      width: 32px;
+      height: 32px; }
+  header h1 {
+    width: 300px;
+    text-align: center;
+    color: #fff;
+    margin: 50px auto 40px auto;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px; }
+  header p {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: Catamaran;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px; }
+  #check:checked ~ header .navlink-wrapper {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: block;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    transition: .5s;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); }
+    #check:checked ~ header .navlink-wrapper a {
+      display: block;
+      border-bottom: 1px solid #ccc;
+      color: #E46F55;
+      padding: 20px; }
+      #check:checked ~ header .navlink-wrapper a:hover {
+        background: #363636;
+        text-decoration: none;
+        transition: .5s;
+        transition-property: background;
+        color: #fff; }
+  section .input-below-header {
+    margin: -30px auto 70px auto;
+    text-align: center; }
+    section .input-below-header input {
+      border: 3px solid #F2994A;
+      box-sizing: border-box;
+      border-radius: 100px;
+      margin-bottom: -40px;
+      margin: 0 auto;
+      height: 60px;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      outline: none;
+      font-size: 18px; }
+      section .input-below-header input::placeholder {
+        color: #C3C0C0;
+        font-size: 14px;
+        text-align: center; }
+  section .about-arinka {
+    margin-bottom: 90px; }
+    section .about-arinka h1 {
+      color: #C3C0C0;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px; }
+    section .about-arinka p {
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px; }
+  section .arinka-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    max-width: 79%;
+    margin-bottom: 70px; }
+    section .arinka-images .one {
+      width: 290px;
+      height: 331px;
+      margin: 0 auto; }
+      section .arinka-images .one img {
+        width: 100%;
+        height: 100%; }
+  section .btn-below-imgs button {
+    width: 149px;
+    height: 45px; }
+  section .hanging-out {
+    position: relative;
+    width: 100%; }
+    section .hanging-out .hanging-out-img {
+      width: 100%;
+      height: 177px;
+      z-index: -5; }
+      section .hanging-out .hanging-out-img img {
+        width: 100%;
+        height: 100%; }
+    section .hanging-out .text {
+      position: absolute;
+      top: 40px;
+      left: 64px;
+      width: 30%; }
+      section .hanging-out .text p {
+        margin-bottom: 10px;
+        font-family: Catamaran;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px; }
+      section .hanging-out .text h1 {
+        line-height: 30px;
+        margin: 0;
+        font-family: Catamaran;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px; }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin: 0 auto; }
+    footer p {
+      margin: 0;
+      color: #A9A9A9;
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px; } }

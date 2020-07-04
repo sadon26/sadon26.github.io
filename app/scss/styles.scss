@@ -1,0 +1,333 @@
+@import 'variables';
+@import 'mixins';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $orangeMix;
+    width: 100%;
+    height: 478px;
+    nav {
+        @include navStyle;
+    }
+    .arinka-logo {
+        display: flex;
+        align-items: center;
+        div {
+            margin-right: 20px;
+        }
+        p {
+            color: $white;
+            @include fontStyle(900, 14px);
+        }
+    }
+    .navlink-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 232px;
+        a {
+            text-decoration: none;
+            color: $white;
+            @include fontStyle(600, 14px);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    button {
+        width: 175px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        border: none;
+        color: $white;
+        &:hover {
+            cursor: pointer;
+            text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+    h1 {
+        width: 738px;
+        text-align: center;
+        color: $white;
+        margin: 50px auto 40px auto;
+        @include fontStyle(900, 64px);
+    }
+    p {
+        text-align: center;
+        margin: 0 auto;
+        color: $white;
+        @include fontStyle(500, 24px);
+    }
+    label {
+        display: none;
+    }
+}
+
+
+section {
+    .input-below-header {
+        margin: -40px auto 140px auto;
+        text-align: center;
+        input {
+            @include inputBelowHeader(600px, 80px, 18px);
+        }
+    }
+    
+    .about-arinka {
+        width: 62%;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 90px;
+        h1 {
+            color: $lightGrey;
+            @include fontStyle(900, 18px);
+        }
+        p {
+            @include fontStyle(500, 24px);
+        }
+    }
+    
+    .arinka-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        max-width: 79%;
+        margin: 0 auto;
+        margin-bottom: 120px;
+        .one {
+            width: 350px;
+            height: 400px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    
+    .btn-below-imgs {
+        text-align: center;
+        margin-bottom: 80px;
+        button {
+            width: 200px;
+            height: 60px;
+            border: 2px solid #E36F55;
+            box-sizing: border-box;
+            border-radius: 30px;
+            color: $darkOrange;
+            background: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .hanging-out {
+        position: relative;
+        width: 100%;
+        .hanging-out-img {
+            width: 100%;
+            height: 500px;
+            z-index: -5;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .text {
+            position: absolute;
+            top: 155px;
+            left: 179px;
+            width: 27%;
+            p {
+                color: $lightOrange;
+                margin: 0;
+                margin-bottom: 20px;
+                @include fontStyle(bold, 18px);
+            }
+            h1 {
+                line-height: 77px;
+                margin: 0;
+                color: $white;
+                @include fontStyle(bold, 70px);
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 60px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    a {
+        text-decoration: none;
+        color: $darkGrey;
+        @include fontStyle(bold, 14px);
+        &:hover {
+            cursor: pointer
+        }
+    }
+    p {
+        margin: 0;
+        color: $darkGrey;
+        @include fontStyle(bold, 14px);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        .navlink-wrapper {
+            display: none;
+        }
+        button {
+            display: none;
+        }
+        label {
+            display: block;
+            &:hover {
+                transition: .5s;
+                opacity: .8;
+                cursor: pointer;
+            }
+            img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        h1 {
+            width: 300px;
+            text-align: center;
+            color: $white;
+            margin: 50px auto 40px auto;
+            @include fontStyle(900, 38px);
+        }
+        p {
+            text-align: center;
+            margin: 0 auto;
+            color: $white;
+            @include fontStyle(500, 18px);
+        }
+    }
+
+    #check:checked ~ header .navlink-wrapper {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        display: block;
+        background: $white;
+        width: 100%;
+        margin: 0;
+        transition: .5s;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+        a {
+            display: block;
+            border-bottom: 1px solid #ccc;
+            color: $darkOrange;
+            padding: 20px;
+            &:hover {
+                background: rgb(54, 54, 54);
+                text-decoration: none;
+                transition: .5s;
+                transition-property: background;
+                color: $white;
+            }
+        }
+    }
+
+    section {
+        .input-below-header {
+            margin: -30px auto 70px auto;
+            text-align: center;
+            input {
+                @include inputBelowHeader(300px, 60px, 14px);
+            }
+        }
+
+        .about-arinka {
+            margin-bottom: 90px;
+            h1 {
+                color: $lightGrey;
+                @include fontStyle(900, 16px);
+            }
+            p {
+                @include fontStyle(500, 18px);
+            }
+        }
+
+        .arinka-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            max-width: 79%;
+            margin-bottom: 70px;
+            .one {
+                width: 290px;
+                height: 331px;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .btn-below-imgs {
+            button {
+                width: 149px;
+                height: 45px;
+            }
+        }
+
+        .hanging-out {
+            position: relative;
+            width: 100%;
+            .hanging-out-img {
+                width: 100%;
+                height: 177px;
+                z-index: -5;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .text {
+                position: absolute;
+                top: 40px;
+                left: 64px;
+                width: 30%;
+                p {
+                    margin-bottom: 10px;
+                    @include fontStyle(bold, 14px);
+                }
+                h1 {
+                    line-height: 30px;
+                    margin: 0;
+                    @include fontStyle(bold, 24px);
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        p {
+            margin: 0;
+            color: $darkGrey;
+            @include fontStyle(bold, 14px);
+        }
+    }
+}
+
+
+
